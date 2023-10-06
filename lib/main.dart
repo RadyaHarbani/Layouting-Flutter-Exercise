@@ -122,11 +122,7 @@ class MyApp extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.only(left: 30, bottom: 15, top: 15),
-              child: Text('Desember',
-                  style: GoogleFonts.poppins(
-                      color: Colors.black,
-                      fontSize: 15,
-                      fontWeight: FontWeight.bold)),
+              child: NamaBulan(namaBulan: 'December'),
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -150,4 +146,10 @@ class MyApp extends StatelessWidget {
       ),
     );
   }
+}
+
+Widget NamaBulan({required String namaBulan}) {
+  return Text(namaBulan,
+      style: GoogleFonts.poppins(
+          color: Colors.black, fontSize: 15, fontWeight: FontWeight.bold));
 }
